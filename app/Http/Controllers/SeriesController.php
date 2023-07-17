@@ -2,16 +2,20 @@
 
 namespace App\Http\Controllers;
 
-class SeriesController
+use Illuminate\Http\Request;
+
+class SeriesController extends Controller
 {
-    public function listSeries() {
+    public function index()
+    {
         $series = [
             'The Witcher',
-            'Brooklin 99',
-            'The Legend of Vox Machina'
+            'The Legend of Vox Machina',
+            'The Lord of the Rings'
         ];
 
         $html = '<ul>';
+
         foreach ($series as $serie) {
             $html .= "<li>$serie</li>";
         }
