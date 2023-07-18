@@ -14,6 +14,6 @@ class SeriesController extends Controller
             'The Lord of the Rings'
         ];
 
-        return view('listar-series')->with('series',$series);
+        return view('series.index')->with('series',$series);
     }
 }
