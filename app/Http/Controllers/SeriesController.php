@@ -11,9 +11,14 @@ class SeriesController extends Controller
         $series = [
             'The Witcher',
             'The Legend of Vox Machina',
-            'The Lord of the Rings'
+            'The Lord of the Rings',
+            'Grey\'s Anatomy'
         ];
 
         return view('series.index')->with('series',$series);
+    }
+
+    public function create() {
+        return view('series.create');
     }
 }
