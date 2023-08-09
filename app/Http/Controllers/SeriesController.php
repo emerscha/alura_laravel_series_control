@@ -25,6 +25,7 @@ class SeriesController extends Controller
     {
         Serie::create($request->all());
 
-        return redirect('/series');
+        // return redirect()->route('series.index');
+        return to_route('series.index');
     }
 }
